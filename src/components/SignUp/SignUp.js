@@ -24,21 +24,22 @@ const SignUp = ({ setUserName, userName }) => {
       : setUserNameMessage("Username can't have special characters");
   };
   const confirmCorrectPassword = (ev) => {
-    const upperCaseMatchRegex = /[^A-Z]g/;
+    const upperCaseMatchRegex = /[A-Z]/;
     const passwordValue = ev.target.value;
+    const upperCaseMatch = upperCaseMatchRegex.test(passwordValue);
     setPassword(passwordValue);
     console.log(passwordValue);
     if (passwordValue.length > 1 && passwordValue.length < 7) {
       setPassWordMessage("Password must contains at least 7 characters");
+    } else if (upperCaseMatch) {
+      setPassWordMessage("Password must contains at least a capital letter");
     } else if (!passwordValue.includes("#")) {
       setPassWordMessage("Password must contains at least one #");
-    } else if (upperCaseMatchRegex.test(passwordValue)) {
-      setPassWordMessage("Password must contains at least a capital letter");
     }
     if (
       passwordValue.length >= 7 &&
       passwordValue.includes("#") &&
-      !upperCaseMatchRegex.test(passwordValue)
+      upperCaseMatch
     )
       setPassWordMessage("ok");
   };
