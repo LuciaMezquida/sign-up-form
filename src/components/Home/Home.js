@@ -5,7 +5,7 @@ import belikelogo from "../../images/belikelogo.png";
 const Home = ({ userName }) => {
   return (
     <main className="home">
-      <div>
+      <header className="logo-container">
         <img
           src={belikelogo}
           className="belike-logo"
@@ -13,7 +13,7 @@ const Home = ({ userName }) => {
           title="Belike logo"
         />
         <p className="welcome-message">{`Welcome, ${userName}!`}</p>
-      </div>
+      </header>
       <section className="news">
         <h2 className="news-title">Novedades</h2>
         <article className="article">

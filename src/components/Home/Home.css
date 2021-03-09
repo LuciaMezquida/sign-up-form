@@ -3,14 +3,18 @@
 }
 .welcome-message {
   text-align: end;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 600;
-  margin: 30px;
+  margin-right: 30px;
+  padding: 10px 0;
   color: #12445d;
+}
+.logo-container {
+  box-shadow: 0px 0px 10px 0px #00000086;
 }
 .belike-logo {
   position: absolute;
-  left: 10px;
+  left: 18px;
   top: 12px;
   width: 80px;
 }
@@ -25,11 +29,11 @@
   letter-spacing: 2px;
 }
 .article {
-  margin: 40px;
+  margin: 60px;
 }
 .article-title {
   font-size: 2rem;
-  margin: 10px 0;
+  margin: 20px 0;
   font-weight: 400;
   color: #12445d;
 }
