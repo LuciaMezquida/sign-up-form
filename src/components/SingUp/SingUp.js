@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./SingUp.css";
+import { Link } from "react-router-dom";
 
 const SingUp = () => {
   return (
@@ -17,7 +18,9 @@ const SingUp = () => {
           Confirm Password
         </label>
         <input type="password" name="passwordConfirm" className="input" />
-        <input type="button" value="Sign Up" className="signUpButton" />
+        <Link to="/home">
+          <input type="button" value="Sign Up" className="signUpButton" />
+        </Link>
       </form>
     </div>
   );
