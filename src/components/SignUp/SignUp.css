@@ -5,6 +5,8 @@
   align-items: center;
 }
 .container {
+  width: 400px;
+  height: 750px;
   border-radius: 5px;
   box-shadow: 0px 0px 10px 0px #0000003a;
   display: flex;
@@ -15,27 +17,46 @@
 .formImage {
   width: 350px;
 }
-.form {
-}
 .input,
 .label {
   display: block;
-  width: 200px;
+  width: 290px;
+}
+.label {
+  font-weight: 600;
+  margin: 25px 0 5px 0;
 }
 .input {
-  height: 25px;
+  padding-left: 5px;
+  height: 40px;
   border-radius: 5px;
   outline-color: #a5e25f;
   border: 2px solid #a5e25f6b;
+  letter-spacing: 1px;
+  font-size: 1rem;
 }
 .signUpButton {
-  width: 200px;
-  height: 30px;
-  margin: auto;
-  margin-bottom: 1.6rem;
-  background-color: transparent;
-  border: 3px solid #a5e25f;
+  width: 290px;
+  height: 40px;
+  margin: 2.8rem 0;
+  background-color: rgb(129, 66, 129);
+  border: none;
   border-radius: 5px;
-  color: purple;
+  color: white;
   font-size: 1.1rem;
+  font-weight: 600;
+}
+.signUpButton:active {
+  transform: scale(0.9);
+}
+
+.message {
+  margin: 8px 0 0 2px;
+  color: #808080;
+  height: 10px;
+  font-size: 0.8rem;
+}
+.arter {
+  font-size: 0.8rem;
+  color: #ec4b0b;
 }

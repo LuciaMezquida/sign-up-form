@@ -1,0 +1,8 @@
+.home {
+  height: 100vh;
+}
+.welcome-message {
+  text-align: end;
+  margin: 30px;
+  font-size: 2.4rem;
+}

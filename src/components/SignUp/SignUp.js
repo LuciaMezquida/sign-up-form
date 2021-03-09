@@ -20,7 +20,7 @@ const SignUp = ({ setUserName, userName }) => {
     const noSpecialCharactersRegex = /[^A-Za-z\s]/;
     const correctUserName = noSpecialCharactersRegex.test(user);
     !correctUserName
-      ? setUserNameMessage("ok")
+      ? setUserNameMessage("OK")
       : setUserNameMessage("Username can't have special characters");
   };
   const confirmCorrectPassword = (ev) => {
@@ -40,7 +40,7 @@ const SignUp = ({ setUserName, userName }) => {
       passwordValue.includes("#") &&
       upperCaseMatch
     )
-      setPassWordMessage("ok");
+      setPassWordMessage("OK");
   };
 
   const confirmMatchPasswords = (ev) => {
@@ -48,14 +48,14 @@ const SignUp = ({ setUserName, userName }) => {
     setConfirmedPassword(passwordValue);
     password !== passwordValue
       ? setMatchPassWordMessage("Passwords don't match")
-      : setMatchPassWordMessage("ok");
+      : setMatchPassWordMessage("OK");
   };
 
   const disableButton = () => {
     if (
-      passwordMessage === "ok" &&
-      matchPasswordMessage === "ok" &&
-      userNameMessage === "ok"
+      passwordMessage === "OK" &&
+      matchPasswordMessage === "OK" &&
+      userNameMessage === "OK"
     ) {
       return "";
     } else {
@@ -105,14 +105,19 @@ const SignUp = ({ setUserName, userName }) => {
           />
 
           <p className="message">{matchPasswordMessage}</p>
+
           <Link to="/home" className="link">
             <input
               type="button"
               value="Sign Up"
               className="input signUpButton"
+              title="Home"
               disabled={disableButton()}
             />
           </Link>
+          <p className="message">
+            Fields with <span className="arter">*</span> are required
+          </p>
         </form>
       </div>
     </div>

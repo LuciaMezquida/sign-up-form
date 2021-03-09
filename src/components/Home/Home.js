@@ -1,10 +1,11 @@
 import "./Home.css";
 import PropTypes from "prop-types";
+import belikelogo from "../../images/belikelogo.png";
 
 const Home = ({ userName }) => {
   return (
     <div className="home">
-      <p>{`Welcome ${userName}`}</p>
+      <p className="welcome-message">{`Welcome ${userName}`}</p>
     </div>
   );
 };
