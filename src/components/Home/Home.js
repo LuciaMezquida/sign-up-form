@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import "./Home.css";
 
-const Home = () => {
+const Home = ({ userName }) => {
   return (
     <div className="home">
-      <p>Welcome</p>
+      <p>Welcome{userName}</p>
     </div>
   );
 };

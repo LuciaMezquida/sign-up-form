@@ -1,15 +1,22 @@
+import React, { useState } from "react";
 import "./App.css";
 import { Route, Switch } from "react-router-dom";
 import SingUp from "./SingUp/SingUp";
 import Home from "./Home/Home";
 
 function App() {
+  const [userName, setUserName] = useState("");
+  const saveUserName = (user) => {
+    setUserName(user);
+  };
   return (
     <div className="App">
       <Switch>
-        <Route exact path="/" component={SingUp} />
+        <Route exact path="/">
+          <SingUp setUserName={saveUserName} userName={userName} />
+        </Route>
         <Route path="/home">
-          <Home />
+          <Home userName={userName} />
         </Route>
       </Switch>
     </div>

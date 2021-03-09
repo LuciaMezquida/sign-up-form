@@ -3,10 +3,14 @@ import "./SingUp.css";
 import devGirl from "../../images/devGirl.png";
 import { Link, Route, Switch } from "react-router-dom";
 
-const SingUp = () => {
-  const [userName, setUserName] = useState("");
+const SingUp = ({ setUserName, userName }) => {
   const [password, setPassword] = useState("");
   const [confirmedPassword, setConfirmedPassword] = useState("");
+
+  const saveUserName = (ev) => {
+    const user = ev.target.value;
+    setUserName(user);
+  };
 
   return (
     <div className="container">
@@ -18,9 +22,8 @@ const SingUp = () => {
         <input
           type="text"
           className="input name"
-          onChange={(ev) => {
-            setUserName(ev.target.value);
-          }}
+          onChange={saveUserName}
+          value={userName}
         />
         <label htmlFor="password" className="password">
           Password
