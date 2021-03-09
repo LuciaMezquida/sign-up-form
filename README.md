@@ -23,5 +23,9 @@ Una vez hemos instalado las dependencias, vamos a arrancar el proyecto. Para ell
 npm start
 ```
 
+### Ejemplo
+
+El proyecto ha sido deployado usando github pages y se puede visitar [aqui](https://luciamezquida.github.io/prueba-belike/)
+
 
 
