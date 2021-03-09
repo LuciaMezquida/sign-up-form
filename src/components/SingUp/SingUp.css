@@ -3,13 +3,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 .formImage {
   width: 40vw;
 }
-.form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+
+.input,
+.label {
+  display: block;
 }

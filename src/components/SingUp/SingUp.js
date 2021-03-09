@@ -17,21 +17,23 @@ const SingUp = ({ setUserName, userName }) => {
   const confirmCorrectUserName = () => {
     const noSpecialCharactersRegex = /[^A-Za-z\s]/;
     const correctUserName = noSpecialCharactersRegex.test(userName);
-    if (!correctUserName) {
-      setUserNameMessage("");
-    } else {
-      setUserNameMessage("Username can't have special characters");
-    }
+    !correctUserName
+      ? setUserNameMessage("")
+      : setUserNameMessage("Username can't have special characters");
   };
   const confirmCorrectPassword = () => {};
-  const confirmMatchPasswords = () => {};
+  const confirmMatchPasswords = () => {
+    password !== confirmedPassword
+      ? setMatchPassWordNameMessage("Passwords don't match")
+      : setMatchPassWordNameMessage("");
+  };
 
   return (
     <div className="container">
+      <img src={devGirl} alt="Dev Girl" className="formImage" />
       <form action="" className="form">
-        <img src={devGirl} alt="Dev Girl" className="formImage" />
-        <label htmlFor="userName" className="name">
-          Username
+        <label htmlFor="userName" className="label name">
+          Username <span className="arter">*</span>
         </label>
         <input
           type="text"
@@ -42,8 +44,8 @@ const SingUp = ({ setUserName, userName }) => {
           required
         />
         <p className="message">{userNameMessage}</p>
-        <label htmlFor="password" className="password">
-          Password
+        <label htmlFor="password" className="label password">
+          Password <span className="arter">*</span>
         </label>
         <input
           type="password"
@@ -56,8 +58,8 @@ const SingUp = ({ setUserName, userName }) => {
         />
 
         <p className="message">{passwordMessage}</p>
-        <label htmlFor="passwordConfirmed" className="password">
-          Confirm Password
+        <label htmlFor="passwordConfirmed" className="label password">
+          Confirm Password <span className="arter">*</span>
         </label>
         <input
           type="password"
@@ -66,12 +68,13 @@ const SingUp = ({ setUserName, userName }) => {
           onChange={(ev) => {
             setConfirmedPassword(ev.target.value);
           }}
+          onBlur={confirmMatchPasswords}
           required
         />
 
         <p className="message">{matchPasswordMessage}</p>
         <Link to="/home">
-          <input type="button" value="Sign Up" className="signUpButton" />
+          <input type="button" value="Sign Up" className="input signUpButton" />
         </Link>
       </form>
     </div>
