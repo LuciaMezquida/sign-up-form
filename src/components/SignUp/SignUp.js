@@ -11,23 +11,25 @@ const SignUp = ({ setUserName, userName }) => {
   const [passwordMessage, setPassWordMessage] = useState("");
   const [matchPasswordMessage, setMatchPassWordMessage] = useState("");
 
-  const saveUserName = (ev) => {
+  //Get the user name and confirm the name has no special characters
+  const confirmCorrectUserName = (ev) => {
     const user = ev.target.value;
     setUserName(user);
-    confirmCorrectUserName(user);
-  };
-  const confirmCorrectUserName = (user) => {
     const noSpecialCharactersRegex = /[^A-Za-z\s]/;
     const correctUserName = noSpecialCharactersRegex.test(user);
+
     !correctUserName
       ? setUserNameMessage("OK")
       : setUserNameMessage("Username can't have special characters");
   };
+
+  //Get the password and confirm it's correct
   const confirmCorrectPassword = (ev) => {
     const upperCaseMatchRegex = /[A-Z]/;
     const passwordValue = ev.target.value;
     const upperCaseMatch = upperCaseMatchRegex.test(passwordValue);
     setPassword(passwordValue);
+
     if (passwordValue.length > 1 && passwordValue.length < 7) {
       setPassWordMessage("Password must contains at least 7 characters");
     } else if (upperCaseMatch) {
@@ -35,6 +37,7 @@ const SignUp = ({ setUserName, userName }) => {
     } else if (!passwordValue.includes("#")) {
       setPassWordMessage("Password must contains at least one #");
     }
+
     if (
       passwordValue.length >= 7 &&
       passwordValue.includes("#") &&
@@ -43,14 +46,16 @@ const SignUp = ({ setUserName, userName }) => {
       setPassWordMessage("OK");
   };
 
+  //Confirm both password values are equal
   const confirmMatchPasswords = (ev) => {
     const passwordValue = ev.target.value;
     setConfirmedPassword(passwordValue);
+
     password !== passwordValue
       ? setMatchPassWordMessage("Passwords don't match")
       : setMatchPassWordMessage("OK");
   };
-
+  //Button able when all inputs are OK
   const disableButton = () => {
     if (
       passwordMessage === "OK" &&
@@ -64,17 +69,17 @@ const SignUp = ({ setUserName, userName }) => {
   };
 
   return (
-    <div className="signupForm">
+    <section className="signupForm">
       <div className="container">
         <img src={devGirl} alt="Dev Girl" className="formImage" />
-        <form action="" className="form">
+        <form className="form">
           <label htmlFor="userName" className="label name">
             Username <span className="arter">*</span>
           </label>
           <input
             type="text"
             className="input name"
-            onChange={saveUserName}
+            onChange={confirmCorrectUserName}
             defaultValue={userName}
             required
           />
@@ -120,7 +125,7 @@ const SignUp = ({ setUserName, userName }) => {
           </p>
         </form>
       </div>
-    </div>
+    </section>
   );
 };
 
