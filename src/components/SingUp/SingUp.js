@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./SingUp.css";
-import { Link } from "react-router-dom";
+import devGirl from "../../images/devGirl.png";
+import { Link, Route, Switch } from "react-router-dom";
 
 const SingUp = () => {
   const [userName, setUserName] = useState("");
@@ -10,7 +11,7 @@ const SingUp = () => {
   return (
     <div className="container">
       <form action="" className="form">
-        <img src="../../images/devGirl.png" alt="Dev Girl" />
+        <img src={devGirl} alt="Dev Girl" className="formImage" />
         <label htmlFor="userName" className="name">
           Name
         </label>
@@ -33,7 +34,7 @@ const SingUp = () => {
           }}
         />
         <label htmlFor="passwordConfirmed" className="password">
-          Confirmed Password
+          Confirm Password
         </label>
         <input
           type="password"

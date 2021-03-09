@@ -4,7 +4,7 @@ import "./Home.css";
 const Home = () => {
   return (
     <div className="home">
-      <img src="../../images/devGirl.png" alt="imagen" />
+      <p>Welcome</p>
     </div>
   );
 };

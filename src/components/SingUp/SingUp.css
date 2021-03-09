@@ -4,6 +4,9 @@
   justify-content: center;
   align-items: center;
 }
+.formImage {
+  width: 40vw;
+}
 .form {
   display: flex;
   justify-content: center;

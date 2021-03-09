@@ -8,7 +8,9 @@ function App() {
     <div className="App">
       <Switch>
         <Route exact path="/" component={SingUp} />
-        <Route path="/home" component={Home} />
+        <Route path="/home">
+          <Home />
+        </Route>
       </Switch>
     </div>
   );
