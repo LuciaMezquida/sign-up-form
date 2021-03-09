@@ -23,6 +23,14 @@ Una vez hemos instalado las dependencias, vamos a arrancar el proyecto. Para ell
 npm start
 ```
 
+### Para compilar el proyecto:
+
+Cuando ya tenemos listo nuestro proyecto para subirlo a producción, ejecutamos el siguiente comando para generar el directorio `docs`:
+
+```bash
+npm run docs
+```
+
 ### Ejemplo
 
 El proyecto ha sido deployado usando github pages y se puede visitar [aqui](https://luciamezquida.github.io/prueba-belike/)
