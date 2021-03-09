@@ -3,6 +3,36 @@
 }
 .welcome-message {
   text-align: end;
+  font-size: 2rem;
+  font-weight: 600;
   margin: 30px;
-  font-size: 2.4rem;
+  color: #12445d;
+}
+.belike-logo {
+  position: absolute;
+  left: 10px;
+  top: 12px;
+  width: 80px;
+}
+.news {
+  margin-top: 100px;
+}
+.news-title {
+  text-align: center;
+  font-size: 3.6rem;
+  color: #12445d;
+  font-weight: 350;
+  letter-spacing: 2px;
+}
+.article {
+  margin: 40px;
+}
+.article-title {
+  font-size: 2rem;
+  margin: 10px 0;
+  font-weight: 400;
+  color: #12445d;
+}
+.hiring {
+  line-height: 25px;
 }
