@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import { Route, Switch } from "react-router-dom";
-import SingUp from "./SingUp/SingUp";
+import SignUp from "./SignUp/SignUp";
 import Home from "./Home/Home";
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
     <div className="App">
       <Switch>
         <Route exact path="/">
-          <SingUp setUserName={saveUserName} userName={userName} />
+          <SignUp setUserName={saveUserName} userName={userName} />
         </Route>
         <Route path="/home">
           <Home userName={userName} />

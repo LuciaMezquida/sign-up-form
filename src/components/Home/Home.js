@@ -1,4 +1,5 @@
 import "./Home.css";
+import PropTypes from "prop-types";
 
 const Home = ({ userName }) => {
   return (
@@ -7,5 +8,7 @@ const Home = ({ userName }) => {
     </div>
   );
 };
-Home.propTypes = {};
+Home.propTypes = {
+  userName: PropTypes.string.isRequired,
+};
 export default Home;
