@@ -3,6 +3,9 @@ import PropTypes from "prop-types";
 import "./SignUp.css";
 import devGirl from "../../images/devGirl.png";
 import { Link } from "react-router-dom";
+import InfoMessage from "../InfoMessage/InfoMessage";
+
+const okMessage = "OK";
 
 const SignUp = ({ setUserName, userName }) => {
   const [password, setPassword] = useState("");
@@ -19,7 +22,7 @@ const SignUp = ({ setUserName, userName }) => {
     const correctUserName = noSpecialCharactersRegex.test(user);
 
     !correctUserName
-      ? setUserNameMessage("OK")
+      ? setUserNameMessage(okMessage)
       : setUserNameMessage("Username can't have special characters");
   };
 
@@ -43,7 +46,7 @@ const SignUp = ({ setUserName, userName }) => {
       passwordValue.includes("#") &&
       upperCaseMatch
     )
-      setPassWordMessage("OK");
+      setPassWordMessage(okMessage);
   };
 
   //Confirm both password values are equal
@@ -53,19 +56,18 @@ const SignUp = ({ setUserName, userName }) => {
 
     password !== passwordValue
       ? setMatchPassWordMessage("Passwords don't match")
-      : setMatchPassWordMessage("OK");
+      : setMatchPassWordMessage(okMessage);
   };
   //Button able when all inputs are OK
   const disableButton = () => {
     if (
-      passwordMessage === "OK" &&
-      matchPasswordMessage === "OK" &&
-      userNameMessage === "OK"
+      passwordMessage === okMessage &&
+      matchPasswordMessage === okMessage &&
+      userNameMessage === okMessage
     ) {
       return "";
-    } else {
-      return "disabled";
     }
+    return "disabled";
   };
 
   return (
@@ -95,7 +97,6 @@ const SignUp = ({ setUserName, userName }) => {
             defaultValue={password}
             required
           />
-
           <p className="message">{passwordMessage}</p>
           <label htmlFor="passwordConfirmed" className="label password">
             Confirm Password <span className="arter">*</span>
@@ -108,7 +109,6 @@ const SignUp = ({ setUserName, userName }) => {
             defaultValue={confirmedPassword}
             required
           />
-
           <p className="message">{matchPasswordMessage}</p>
 
           <Link to="/home" className="link">
@@ -120,9 +120,7 @@ const SignUp = ({ setUserName, userName }) => {
               disabled={disableButton()}
             />
           </Link>
-          <p className="message">
-            Fields with <span className="arter">*</span> are required
-          </p>
+          <InfoMessage />
         </form>
       </div>
     </section>

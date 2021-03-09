@@ -49,7 +49,9 @@ const Home = ({ userName }) => {
     </main>
   );
 };
+
 Home.propTypes = {
   userName: PropTypes.string.isRequired,
 };
+
 export default Home;

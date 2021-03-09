@@ -5,6 +5,7 @@ import Home from "./Home/Home";
 
 function App() {
   const [userName, setUserName] = useState("");
+  //Get the user name to pass it throw props to home component
   const saveUserName = (user) => {
     setUserName(user);
   };
