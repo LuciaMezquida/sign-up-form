@@ -18,12 +18,12 @@ const SignUp = ({ setUserName, userName }) => {
   const confirmCorrectUserName = (ev) => {
     const user = ev.target.value;
     setUserName(user);
-    const noSpecialCharactersRegex = /[^A-Za-z\s]/;
-    const correctUserName = noSpecialCharactersRegex.test(user);
+    const specialCharactersRegex = /[^A-Za-z\s]/;
+    const notCorrectUserName = specialCharactersRegex.test(user);
 
-    !correctUserName
-      ? setUserNameMessage(okMessage)
-      : setUserNameMessage("Username can't have special characters");
+    notCorrectUserName
+      ? setUserNameMessage("Username can't have special characters")
+      : setUserNameMessage(okMessage);
   };
 
   //Get the password and confirm it's correct
