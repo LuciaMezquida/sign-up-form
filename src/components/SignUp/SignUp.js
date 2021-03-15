@@ -35,7 +35,7 @@ const SignUp = ({ setUserName, userName }) => {
 
     if (passwordValue.length > 1 && passwordValue.length < 7) {
       setPassWordMessage("Password must contains at least 7 characters");
-    } else if (upperCaseMatch) {
+    } else if (!upperCaseMatch) {
       setPassWordMessage("Password must contains at least a capital letter");
     } else if (!passwordValue.includes("#")) {
       setPassWordMessage("Password must contains at least one #");
