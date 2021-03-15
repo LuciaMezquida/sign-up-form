@@ -6,18 +6,26 @@ import Home from "./Home/Home";
 
 function App() {
   const [userName, setUserName] = useState("");
+  const [inputsAreValid, setInputsAreValid] = useState(false);
   //Get the user name to pass it throw props to home component
   const saveUserName = (user) => {
     setUserName(user);
+  };
+  const saveInputsAreValid = (inputsAreValidState) => {
+    setInputsAreValid(inputsAreValidState);
   };
   return (
     <div className="App">
       <Switch>
         <Route exact path="/">
-          <SignUp setUserName={saveUserName} userName={userName} />
+          <SignUp
+            setUserName={saveUserName}
+            userName={userName}
+            saveInputsAreValid={saveInputsAreValid}
+          />
         </Route>
         <Route path="/home">
-          <Home userName={userName} />
+          <Home userName={userName} inputsAreValid={inputsAreValid} />
         </Route>
       </Switch>
     </div>

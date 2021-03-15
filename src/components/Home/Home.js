@@ -1,8 +1,21 @@
 import "./Home.css";
+import React, { useEffect } from "react";
+import { useHistory } from "react-router-dom";
 import PropTypes from "prop-types";
 import belikelogo from "../../images/belikelogo.png";
 
-const Home = ({ userName }) => {
+const Home = ({ userName, inputsAreValid }) => {
+  const history = useHistory();
+  const goSignUp = () => history.push("/");
+
+  useEffect(() => {
+    if (!inputsAreValid) {
+      console.error("not user ");
+      goSignUp();
+    }
+    console.log(userName);
+  }, []);
+
   return (
     <main className="home">
       <header className="logo-container">

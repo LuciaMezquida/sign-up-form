@@ -7,7 +7,7 @@ import InfoMessage from "../InfoMessage/InfoMessage";
 
 const okMessage = "OK";
 
-const SignUp = ({ setUserName, userName }) => {
+const SignUp = ({ setUserName, userName, saveInputsAreValid }) => {
   const [password, setPassword] = useState("");
   const [confirmedPassword, setConfirmedPassword] = useState("");
   const [userNameMessage, setUserNameMessage] = useState("");
@@ -65,6 +65,7 @@ const SignUp = ({ setUserName, userName }) => {
       matchPasswordMessage === okMessage &&
       userNameMessage === okMessage
     ) {
+      saveInputsAreValid(true);
       return "";
     }
     return "disabled";
