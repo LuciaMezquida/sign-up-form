@@ -1,6 +1,6 @@
-import "./Articles.css";
+import "./Article.css";
 
-const Articles = () => {
+const Article = () => {
   return (
     <article className="article">
       <h3 className="article-title">We are hiring!</h3>
@@ -31,4 +31,4 @@ const Articles = () => {
     </article>
   );
 };
-export default Articles;
+export default Article;

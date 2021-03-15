@@ -1,7 +1,7 @@
 import "./Home.css";
 import PropTypes from "prop-types";
 import belikelogo from "../../images/belikelogo.png";
-import Articles from "../Articles/Articles";
+import Article from "../Article/Article";
 
 const Home = ({ userName }) => {
   return (
@@ -17,7 +17,7 @@ const Home = ({ userName }) => {
       </header>
       <section className="news">
         <h2 className="news-title">Novedades</h2>
-        <Articles />
+        <Article />
       </section>
     </main>
   );
