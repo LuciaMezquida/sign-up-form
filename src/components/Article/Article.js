@@ -4,7 +4,7 @@ const Article = () => {
   return (
     <article className="article">
       <h3 className="article-title">We are hiring!</h3>
-      <p className="hiring">
+      <p className="article-text">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, totam
         necessitatibus. Amet earum voluptate, magnam veritatis numquam dolores
         esse doloribus expedita, minus perferendis unde eligendi aliquid culpa

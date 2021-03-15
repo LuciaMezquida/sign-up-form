@@ -16,7 +16,7 @@ const Home = ({ userName }) => {
         <p className="welcome-message">{`Welcome, ${userName}!`}</p>
       </header>
       <section className="news">
-        <h2 className="news-title">Novedades</h2>
+        <h2 className="news-title">News</h2>
         <Article />
       </section>
     </main>
