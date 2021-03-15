@@ -1,0 +1,12 @@
+.article {
+  margin: 60px;
+}
+.article-title {
+  font-size: 2rem;
+  margin: 20px 0;
+  font-weight: 400;
+  color: #12445d;
+}
+.hiring {
+  line-height: 25px;
+}
