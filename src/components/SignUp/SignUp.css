@@ -28,18 +28,21 @@
 }
 .input {
   padding-left: 5px;
-  height: 40px;
+  height: 44px;
   border-radius: 5px;
   outline-color: #a5e25f;
   border: 2px solid #a5e25f6b;
   letter-spacing: 1px;
   font-size: 1rem;
 }
+.input::placeholder{
+  color: #12445d69;
+}
 .signUpButton {
   width: 320px;
-  height: 40px;
+  height: 44px;
   margin: 2.8rem 0;
-  background-color: rgb(129, 66, 129);
+  background-color: #12445d;
   border: none;
   border-radius: 5px;
   color: white;

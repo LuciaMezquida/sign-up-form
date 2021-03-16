@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import "./SignUp.css";
-import devGirl from "../../images/devGirl.png";
+import devGirl from "../../images/dev-girl2.png";
 import { Link } from "react-router-dom";
 import InfoMessage from "../InfoMessage/InfoMessage";
 import belikelogo from "../../images/belikelogo.png";
@@ -79,12 +79,7 @@ const SignUp = ({ setUserName, userName, saveInputsAreValid }) => {
       <section className="signupForm">
         <div className="container">
           <img src={devGirl} alt="Dev Girl" className="formImage" />
-          <img
-            src={belikelogo}
-            className="belike-logo"
-            alt="Belike logo"
-            title="Belike logo"
-          />
+
           <form className="form">
             <label htmlFor="userName" className="label name">
               Username <span className="asterisk">*</span>
@@ -95,6 +90,7 @@ const SignUp = ({ setUserName, userName, saveInputsAreValid }) => {
               onChange={confirmCorrectUserName}
               defaultValue={userName}
               required
+              placeholder="ej: Tahani"
             />
             <p className="message">{userNameMessage}</p>
             <label htmlFor="password" className="label password">
@@ -107,6 +103,7 @@ const SignUp = ({ setUserName, userName, saveInputsAreValid }) => {
               onChange={confirmCorrectPassword}
               defaultValue={password}
               required
+              placeholder="Password"
             />
             <p className="message">{passwordMessage}</p>
             <label htmlFor="passwordConfirmed" className="label password">
@@ -119,6 +116,7 @@ const SignUp = ({ setUserName, userName, saveInputsAreValid }) => {
               onChange={confirmMatchPasswords}
               defaultValue={confirmedPassword}
               required
+              placeholder="Repeat password"
             />
             <p className="message">{matchPasswordMessage}</p>
 
