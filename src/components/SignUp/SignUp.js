@@ -77,7 +77,7 @@ const SignUp = ({ setUserName, userName, saveInputsAreValid }) => {
         <img src={devGirl} alt="Dev Girl" className="formImage" />
         <form className="form">
           <label htmlFor="userName" className="label name">
-            Username <span className="arter">*</span>
+            Username <span className="asterik">*</span>
           </label>
           <input
             type="text"
@@ -88,7 +88,7 @@ const SignUp = ({ setUserName, userName, saveInputsAreValid }) => {
           />
           <p className="message">{userNameMessage}</p>
           <label htmlFor="password" className="label password">
-            Password <span className="arter">*</span>
+            Password <span className="asterik">*</span>
           </label>
           <input
             type="password"
@@ -100,7 +100,7 @@ const SignUp = ({ setUserName, userName, saveInputsAreValid }) => {
           />
           <p className="message">{passwordMessage}</p>
           <label htmlFor="passwordConfirmed" className="label password">
-            Confirm Password <span className="arter">*</span>
+            Confirm Password <span className="asterik">*</span>
           </label>
           <input
             type="password"
