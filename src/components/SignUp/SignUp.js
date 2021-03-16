@@ -7,7 +7,7 @@ import InfoMessage from "../InfoMessage/InfoMessage";
 
 const okMessage = "OK";
 
-const SignUp = ({ setUserName, userName }) => {
+const SignUp = ({ setUserName, userName, saveInputsAreValid }) => {
   const [password, setPassword] = useState("");
   const [confirmedPassword, setConfirmedPassword] = useState("");
   const [userNameMessage, setUserNameMessage] = useState("");
@@ -18,12 +18,12 @@ const SignUp = ({ setUserName, userName }) => {
   const confirmCorrectUserName = (ev) => {
     const user = ev.target.value;
     setUserName(user);
-    const noSpecialCharactersRegex = /[^A-Za-z\s]/;
-    const correctUserName = noSpecialCharactersRegex.test(user);
+    const specialCharactersRegex = /[^A-Za-z\s]/;
+    const notCorrectUserName = specialCharactersRegex.test(user);
 
-    !correctUserName
-      ? setUserNameMessage(okMessage)
-      : setUserNameMessage("Username can't have special characters");
+    notCorrectUserName
+      ? setUserNameMessage("Username can't have special characters")
+      : setUserNameMessage(okMessage);
   };
 
   //Get the password and confirm it's correct
@@ -35,7 +35,7 @@ const SignUp = ({ setUserName, userName }) => {
 
     if (passwordValue.length > 1 && passwordValue.length < 7) {
       setPassWordMessage("Password must contains at least 7 characters");
-    } else if (upperCaseMatch) {
+    } else if (!upperCaseMatch) {
       setPassWordMessage("Password must contains at least a capital letter");
     } else if (!passwordValue.includes("#")) {
       setPassWordMessage("Password must contains at least one #");
@@ -65,6 +65,7 @@ const SignUp = ({ setUserName, userName }) => {
       matchPasswordMessage === okMessage &&
       userNameMessage === okMessage
     ) {
+      saveInputsAreValid(true);
       return "";
     }
     return "disabled";
@@ -76,7 +77,7 @@ const SignUp = ({ setUserName, userName }) => {
         <img src={devGirl} alt="Dev Girl" className="formImage" />
         <form className="form">
           <label htmlFor="userName" className="label name">
-            Username <span className="arter">*</span>
+            Username <span className="asterik">*</span>
           </label>
           <input
             type="text"
@@ -87,7 +88,7 @@ const SignUp = ({ setUserName, userName }) => {
           />
           <p className="message">{userNameMessage}</p>
           <label htmlFor="password" className="label password">
-            Password <span className="arter">*</span>
+            Password <span className="asterik">*</span>
           </label>
           <input
             type="password"
@@ -99,7 +100,7 @@ const SignUp = ({ setUserName, userName }) => {
           />
           <p className="message">{passwordMessage}</p>
           <label htmlFor="passwordConfirmed" className="label password">
-            Confirm Password <span className="arter">*</span>
+            Confirm Password <span className="asterik">*</span>
           </label>
           <input
             type="password"
