@@ -4,7 +4,6 @@ import "./SignUp.css";
 import devGirl from "../../images/dev-girl2.png";
 import { Link } from "react-router-dom";
 import InfoMessage from "../InfoMessage/InfoMessage";
-import belikelogo from "../../images/belikelogo.png";
 import Header from "../Header/Header";
 
 const okMessage = "OK";
