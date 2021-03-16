@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import "./SignUp.css";
-import devGirl from "../../images/devGirl.png";
+import devGirl from "../../images/dev-girl2.png";
 import { Link } from "react-router-dom";
 import InfoMessage from "../InfoMessage/InfoMessage";
-import belikelogo from "../../images/belikelogo.png";
+import Header from "../Header/Header";
 
 const okMessage = "OK";
 
@@ -73,65 +73,66 @@ const SignUp = ({ setUserName, userName, saveInputsAreValid }) => {
   };
 
   return (
-    <section className="signupForm">
-      <div className="container">
-        <img src={devGirl} alt="Dev Girl" className="formImage" />
-        <img
-          src={belikelogo}
-          className="belike-logo"
-          alt="Belike logo"
-          title="Belike logo"
-        />
-        <form className="form">
-          <label htmlFor="userName" className="label name">
-            Username <span className="asterisk">*</span>
-          </label>
-          <input
-            type="text"
-            className="input name"
-            onChange={confirmCorrectUserName}
-            defaultValue={userName}
-            required
-          />
-          <p className="message">{userNameMessage}</p>
-          <label htmlFor="password" className="label password">
-            Password <span className="asterisk">*</span>
-          </label>
-          <input
-            type="password"
-            name="password"
-            className="input"
-            onChange={confirmCorrectPassword}
-            defaultValue={password}
-            required
-          />
-          <p className="message">{passwordMessage}</p>
-          <label htmlFor="passwordConfirmed" className="label password">
-            Confirm Password <span className="asterisk">*</span>
-          </label>
-          <input
-            type="password"
-            name="passwordConfirmed"
-            className="input"
-            onChange={confirmMatchPasswords}
-            defaultValue={confirmedPassword}
-            required
-          />
-          <p className="message">{matchPasswordMessage}</p>
+    <>
+      <Header userName={`Sign Up`} />
+      <section className="signupForm">
+        <div className="container">
+          <img src={devGirl} alt="Dev Girl" className="formImage" />
 
-          <Link to="/home" className="link">
+          <form className="form">
+            <label htmlFor="userName" className="label name">
+              Username <span className="asterisk">*</span>
+            </label>
             <input
-              type="button"
-              value="Sign Up"
-              className="input signUpButton"
-              title="Home"
-              disabled={disableButton()}
+              type="text"
+              className="input name"
+              onChange={confirmCorrectUserName}
+              defaultValue={userName}
+              required
+              placeholder="ex: Tahani"
             />
-          </Link>
-          <InfoMessage />
-        </form>
-      </div>
-    </section>
+            <p className="message">{userNameMessage}</p>
+            <label htmlFor="password" className="label password">
+              Password <span className="asterisk">*</span>
+            </label>
+            <input
+              type="password"
+              name="password"
+              className="input"
+              onChange={confirmCorrectPassword}
+              defaultValue={password}
+              required
+              placeholder="Password"
+            />
+            <p className="message">{passwordMessage}</p>
+            <label htmlFor="passwordConfirmed" className="label password">
+              Confirm Password <span className="asterisk">*</span>
+            </label>
+            <input
+              type="password"
+              name="passwordConfirmed"
+              className="input"
+              onChange={confirmMatchPasswords}
+              defaultValue={confirmedPassword}
+              required
+              placeholder="Repeat password"
+            />
+            <p className="message">{matchPasswordMessage}</p>
+
+            <Link to="/home" className="link">
+              <input
+                type="button"
+                value="Sign Up"
+                className="input signUpButton"
+                title="Home"
+                disabled={disableButton()}
+              />
+            </Link>
+            <InfoMessage />
+          </form>
+        </div>
+      </section>
+    </>
   );
 };
 
