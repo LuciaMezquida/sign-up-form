@@ -4,6 +4,7 @@ import "./SignUp.css";
 import devGirl from "../../images/devGirl.png";
 import { Link } from "react-router-dom";
 import InfoMessage from "../InfoMessage/InfoMessage";
+import belikelogo from "../../images/belikelogo.png";
 
 const okMessage = "OK";
 
@@ -75,9 +76,15 @@ const SignUp = ({ setUserName, userName, saveInputsAreValid }) => {
     <section className="signupForm">
       <div className="container">
         <img src={devGirl} alt="Dev Girl" className="formImage" />
+        <img
+          src={belikelogo}
+          className="belike-logo"
+          alt="Belike logo"
+          title="Belike logo"
+        />
         <form className="form">
           <label htmlFor="userName" className="label name">
-            Username <span className="asterik">*</span>
+            Username <span className="asterisk">*</span>
           </label>
           <input
             type="text"
@@ -88,7 +95,7 @@ const SignUp = ({ setUserName, userName, saveInputsAreValid }) => {
           />
           <p className="message">{userNameMessage}</p>
           <label htmlFor="password" className="label password">
-            Password <span className="asterik">*</span>
+            Password <span className="asterisk">*</span>
           </label>
           <input
             type="password"
@@ -100,7 +107,7 @@ const SignUp = ({ setUserName, userName, saveInputsAreValid }) => {
           />
           <p className="message">{passwordMessage}</p>
           <label htmlFor="passwordConfirmed" className="label password">
-            Confirm Password <span className="asterik">*</span>
+            Confirm Password <span className="asterisk">*</span>
           </label>
           <input
             type="password"
