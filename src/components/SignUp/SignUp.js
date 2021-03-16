@@ -90,7 +90,7 @@ const SignUp = ({ setUserName, userName, saveInputsAreValid }) => {
               onChange={confirmCorrectUserName}
               defaultValue={userName}
               required
-              placeholder="ej: Tahani"
+              placeholder="ex: Tahani"
             />
             <p className="message">{userNameMessage}</p>
             <label htmlFor="password" className="label password">

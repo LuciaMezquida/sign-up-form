@@ -1,12 +1,12 @@
 .signupForm {
-  height: 100vh;
+  height: 94vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .container {
-  width: 400px;
-  height: 750px;
+  width: 450px;
+  height: 760px;
   border-radius: 5px;
   box-shadow: 0px 0px 10px 0px #0000003a;
   display: flex;
@@ -28,7 +28,7 @@
 }
 .input {
   padding-left: 5px;
-  height: 44px;
+  height: 46px;
   border-radius: 5px;
   outline-color: #a5e25f;
   border: 2px solid #a5e25f6b;
@@ -40,7 +40,7 @@
 }
 .signUpButton {
   width: 320px;
-  height: 44px;
+  height: 46px;
   margin: 2.8rem 0;
   background-color: #12445d;
   border: none;
