@@ -2,8 +2,8 @@ import "./Home.css";
 import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import PropTypes from "prop-types";
-import belikelogo from "../../images/belikelogo.png";
 import Article from "../Article/Article";
+import Header from "../Header/Header";
 
 const Home = ({ userName, inputsAreValid }) => {
   const history = useHistory();
@@ -18,15 +18,7 @@ const Home = ({ userName, inputsAreValid }) => {
 
   return (
     <main className="home">
-      <header className="logo-container">
-        <img
-          src={belikelogo}
-          className="belike-logo"
-          alt="Belike logo"
-          title="Belike logo"
-        />
-        <p className="welcome-message">{`Welcome, ${userName}!`}</p>
-      </header>
+      <Header userName={`Welcome, ${userName}!`} />
       <section className="news">
         <h2 className="news-title">News</h2>
         <Article
@@ -59,7 +51,8 @@ const Home = ({ userName, inputsAreValid }) => {
 };
 
 Home.propTypes = {
-  userName: PropTypes.string.isRequired,
+  userName: PropTypes.string,
+  inputsAreValid: PropTypes.bool,
 };
 
 export default Home;
