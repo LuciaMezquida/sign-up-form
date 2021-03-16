@@ -14,7 +14,6 @@ const Home = ({ userName, inputsAreValid }) => {
       console.error("not user ");
       goSignUp();
     }
-    console.log(userName);
   }, []);
 
   return (

@@ -1,7 +1,7 @@
 const InfoMessage = () => {
   return (
     <p className="message">
-      Fields with <span className="arter">*</span> are required
+      Fields with <span className="asterisk">*</span> are required
     </p>
   );
 };
