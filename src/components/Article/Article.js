@@ -7,7 +7,7 @@ const Article = ({ title, text, link }) => {
       <h3 className="article-title">{title}</h3>
       <p className="article-text">{text}</p>
       <a href={link} className="link">
-        More info
+        👉🏻 More info
       </a>
     </article>
   );

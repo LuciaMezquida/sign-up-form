@@ -39,6 +39,7 @@ const Home = ({ userName, inputsAreValid }) => {
         soluta voluptatibus illo ex labore consequuntur odit minus quas quis
         possimus facilis, at voluptatum totam maiores tempore nostrum! Ex a
         harum animi blanditiis."
+          link="//luciamezquida.netlify.app/"
         />
         <Article
           title="34 JavaScript Optimization Techniques to Know in 2021"
