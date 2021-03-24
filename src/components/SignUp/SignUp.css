@@ -49,9 +49,10 @@
   font-size: 1.1rem;
   font-weight: 600;
   cursor: pointer;
+  outline-style: none;
 }
 .signUpButton:active {
-  transform: scale(0.9);
+  transform: scale(0.97);
 }
 .signUpButton:disabled {
   background-color: #12445d88;

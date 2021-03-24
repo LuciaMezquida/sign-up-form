@@ -34,7 +34,7 @@ const SignUp = ({ setUserName, userName, saveInputsAreValid }) => {
     const upperCaseMatch = upperCaseMatchRegex.test(passwordValue);
     setPassword(passwordValue);
 
-    if (passwordValue.length > 1 && passwordValue.length < 7) {
+    if (passwordValue.length > 1 && passwordValue.length < 8) {
       setPassWordMessage("Password must contains at least 7 characters");
     } else if (!upperCaseMatch) {
       setPassWordMessage("Password must contains at least a capital letter");
@@ -43,7 +43,7 @@ const SignUp = ({ setUserName, userName, saveInputsAreValid }) => {
     }
 
     if (
-      passwordValue.length >= 7 &&
+      passwordValue.length > 7 &&
       passwordValue.includes("#") &&
       upperCaseMatch
     )
