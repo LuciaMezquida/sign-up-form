@@ -35,7 +35,7 @@
   letter-spacing: 1px;
   font-size: 1rem;
 }
-.input::placeholder{
+.input::placeholder {
   color: #12445d69;
 }
 .signUpButton {
@@ -53,7 +53,9 @@
 .signUpButton:active {
   transform: scale(0.9);
 }
-
+.signUpButton:disabled {
+  background-color: #12445d88;
+}
 .message {
   margin: 8px 0 0 2px;
   color: #808080;
