@@ -1,6 +1,5 @@
 # Belike Sign Up
 
-
 ## Guía de inicio rápido
 
 > **NOTA:** Necesitas tener instalado [Node JS](https://nodejs.org/)
@@ -34,6 +33,8 @@ npm run docs
 ### Ejemplo
 
 El proyecto ha sido deployado usando github pages y se puede visitar [aqui](https://luciamezquida.github.io/prueba-belike/)
+
+<img src="https://i.postimg.cc/yYhvBTTc/Captura-de-pantalla-2021-03-16-a-las-17-44-47.png" >
 
 
 
