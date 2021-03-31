@@ -32,7 +32,7 @@ npm run docs
 
 ### Ejemplo
 
-El proyecto ha sido deployado usando github pages y se puede visitar [aqui](https://luciamezquida.github.io/prueba-belike/)
+El proyecto ha sido deployado usando github pages y se puede visitar [aqui](https://luciamezquida.github.io/sign-up-form/)
 
 <img src="https://i.postimg.cc/yYhvBTTc/Captura-de-pantalla-2021-03-16-a-las-17-44-47.png" >
 
